@@ -11,7 +11,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCijtc1i-7u_rcwAHIeEDKXSZP3BViE_D0&sensor=false">
     </script>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="jquery.mmenu.js"></script>
+    <script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -32,7 +32,12 @@
   </head>
   <body>
   
-  	<!--<div style="z-index:9999; position:absolute; padding-top: 20px;"><a id="simple-menu" href="#sidr"><img src="./tab.png" /></a></div>-->
+  	<div>
+		<div style="z-index:9999; position:absolute; padding-top: 20px;">
+			<a id="simple-menu" href="#sidr"><img src="./tab.png" /></a>
+		</div>
+		
+    </div>
     <div id="map-canvas"/>
     
     <div id="sidr" style="z-index:9999;">
@@ -43,6 +48,6 @@
 		<li><a href="#">List 3</a></li>
 	  </ul>
 	</div>
-    
+ 
   </body>
 </html>
