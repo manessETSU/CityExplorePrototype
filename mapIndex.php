@@ -10,8 +10,6 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCijtc1i-7u_rcwAHIeEDKXSZP3BViE_D0&sensor=false">
     </script>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
     <script type="text/javascript">
       function initialize() {
         var mapOptions = {
@@ -29,25 +27,37 @@
       }
       google.maps.event.addDomListener(window, 'load', initialize);
     </script>
+    <link rel="stylesheet" href="css/jquery.sidr.light.css">
+    <style>
+    	/* Hides the map and satellite view buttons. */
+    	.gmnoprint{display:none}
+    </style>
   </head>
   <body>
-  
-  	<div>
-		<div style="z-index:9999; position:absolute; padding-top: 20px;">
-			<a id="simple-menu" href="#sidr"><img src="./tab.png" /></a>
-		</div>
-		
+
+    <div style="height:100%; width:100%;">
+    	<div style="z-index:9999; position:absolute; padding-top: 20px;">
+    		<a id="simple-menu" href="#sidr"><img src="./tab.png" /></a>
+    	</div>
+    	<div id="map-canvas"/>
     </div>
-    <div id="map-canvas"/>
     
-    <div id="sidr" style="z-index:9999;">
+    <div id="sidr">
 	  <!-- Your content -->
 	  <ul>
-		<li><a href="#">List 1</a></li>
-		<li class="active"><a href="#">List 2</a></li>
-		<li><a href="#">List 3</a></li>
+		<li><a href="#">Bookmarks</a></li>
+		<li class="active"><a href="#">Settings</a></li>
 	  </ul>
 	</div>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="js/jquery.sidr.min.js"></script>
+	
+	<script>
+$(document).ready(function() {
+  $('#simple-menu').sidr();
+});
+</script>
  
   </body>
 </html>
