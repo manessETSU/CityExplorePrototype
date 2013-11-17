@@ -5,26 +5,25 @@
 	</head>
 	<body>
 	
-		<div class="row-fluid">
+		<div class="row-fluid" style="margin-top:100px;">
 		
 			<div style="padding-left: 30px; padding-right: 30px;">
 	
-				<h1>ETSU CityExplore</h1>
+				<h1 style="padding-bottom:15px;">ETSU CityExplore</h1>
 
 				<form class="form-horizontal">
 				  <fieldset>
-					<legend>Login</legend>
 				
 					<div class="control-group">
-						<input type="text" id="password" placeholder="Username">
+						<input type="text" class="input-block-level id="password" placeholder="Username">
+					</div>
+					<div class="control-group">
+						<input type="text" class="input-block-level id="password" placeholder="Password">
 					</div>
 				
 					<div class="control-group">
-						<input type="text" id="password" placeholder="Password">
-					</div>
-				
-					<div class="control-group">
-						<button type="submit" class="btn">Login</button>
+						<button type="submit" class="btn btn-primary btn-block">Login</button>
+						<button type="submit" class="btn btn-block">Don't have an account? Register Now.</button>
 					</div>
 				  </fieldset>
 				</form>
