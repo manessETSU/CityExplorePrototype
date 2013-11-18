@@ -13,7 +13,15 @@
 
 				<form class="form-horizontal">
 				  <fieldset>
-					<legend>Login</legend>
+					<legend>Register</legend>
+				
+					<div class="control-group">
+						<input type="text" id="firstname" placeholder="First Name">
+					</div>
+				
+					<div class="control-group">
+						<input type="text" id="lastname" placeholder="Last Name">
+					</div>
 				
 					<div class="control-group">
 						<input type="text" id="username" placeholder="Username">
@@ -24,7 +32,11 @@
 					</div>
 				
 					<div class="control-group">
-						<button type="submit" class="btn">Login</button>
+						<input type="password" id="confirmpassword" placeholder="Confirm Password">
+					</div>
+				
+					<div class="control-group">
+						<button type="submit" class="btn">Register</button>
 					</div>
 				  </fieldset>
 				</form>
