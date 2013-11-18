@@ -15,10 +15,10 @@
 				  <fieldset>
 				
 					<div class="control-group">
-						<input type="text" id="username" placeholder="Username">
+						<input type="text" class="input-block-level" id="username" placeholder="Username">
 					</div>
 					<div class="control-group">
-						<input type="password" class="input-block-level id="password" placeholder="Password">
+						<input type="password" class="input-block-level" id="password" placeholder="Password">
 					</div>
 				
 					<div class="control-group">
