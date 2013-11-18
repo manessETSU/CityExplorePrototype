@@ -66,7 +66,7 @@
 				<i class="icon-th-list icon-white"></i>
 			</a>
 			
-			<span class="brand">ETSU CityExplore</span>
+			<span class="brand">ETSU CityExplorer</span>
 		
 	  </div>
 	</div>

@@ -9,7 +9,7 @@
 		
 			<div style="padding-left: 30px; padding-right: 30px;">
 	
-				<h1>ETSU CityExplore</h1>
+				<h1>ETSU CityExplorer</h1>
 
 				<form class="form-horizontal">
 				  <fieldset>
