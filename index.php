@@ -9,7 +9,7 @@
 		
 			<div style="padding-left: 30px; padding-right: 30px;">
 	
-				<h1 style="padding-bottom:15px;">ETSU CityExplore</h1>
+				<h1 style="padding-bottom:15px;">ETSU CityExplorer</h1>
 
 				<form class="form-horizontal">
 				  <fieldset>
@@ -18,12 +18,12 @@
 						<input type="text" class="input-block-level id="password" placeholder="Username">
 					</div>
 					<div class="control-group">
-						<input type="text" class="input-block-level id="password" placeholder="Password">
+						<input type="password" class="input-block-level id="password" placeholder="Password">
 					</div>
 				
 					<div class="control-group">
 						<button type="submit" class="btn btn-primary btn-block">Login</button>
-						<button type="submit" class="btn btn-block">Don't have an account? Register Now.</button>
+						<a href="register.php" class="btn btn-block">Don't have an account? Register Now.</a>
 					</div>
 				  </fieldset>
 				</form>
