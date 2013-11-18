@@ -24,13 +24,36 @@
   		  overviewMapControl: false,
   		  zoomControl: false
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+        map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+            
+        var operaHouseLatLng = new google.maps.LatLng(-33.857776,151.214999);
+        //-33.860081,151.215089
+        var governmentHouseLatLng = new google.maps.LatLng(-33.860081,151.215089);
+            
+         var marker = new google.maps.Marker({
+			  position: operaHouseLatLng,
+			  map: map,
+			  title: 'Sydney Opera House'
+		  });
+		  
+		  var marker2 = new google.maps.Marker({
+			  position: governmentHouseLatLng,
+			  map: map,
+			  title: 'Sydney Opera House'
+		  });
+		  
+		  var marker2 = new google.maps.Marker({
+			  position: new google.maps.LatLng(-33.861133,151.214038),
+			  map: map,
+			  title: 'Sydney Opera House',
+			  icon: './img/blue-dot.png'
+		  });
       }
       
       //Displays the map once the window loads
       google.maps.event.addDomListener(window, 'load', initialize);
-      
+
     </script>
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="css/jquery.sidr.dark.css">
@@ -50,11 +73,16 @@
 		  margin-left: auto;
 		  padding-left:45px;
 		  margin-right: auto;
-		  width: 165px;
+		  width: 180px;
 		  float: none;
 		  display: block;
 		  margin-top: -35px;
 		  color:white;
+		}
+		
+		.distance{
+			background-image:none !important;
+			box-shadow:none !important;
 		}
     </style>
   </head>
@@ -80,6 +108,36 @@
 	  <ul>
 		<li><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="#"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
+	  </ul>
+	  
+	  <hr />
+	  
+	  <ul>
+	  	<li><a href="#">Government House 
+	  		<span class="rating">
+	  			<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+	  		</span>
+	  		<h5 class="distance">
+	  			0.14 km
+	  		</h5>
+	  	</a></li>
+		
+		<li><a href="#">Sydney Opera House
+		
+			<span class="rating">
+	  			<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+				<i class="icon-star icon-white"></i>
+	  		</span>
+	  		<h5 class="distance">
+	  			0.14 km
+	  		</h5>
+		
+		</a></li>
 	  </ul>
 	</div>
 	
