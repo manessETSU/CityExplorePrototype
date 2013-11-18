@@ -50,7 +50,7 @@
 		  margin-left: auto;
 		  padding-left:45px;
 		  margin-right: auto;
-		  width: 160px;
+		  width: 165px;
 		  float: none;
 		  display: block;
 		  margin-top: -35px;
