@@ -5,38 +5,37 @@
 	</head>
 	<body>
 	
-		<div class="row-fluid">
+		<div class="row-fluid" style="margin-top:100px;">
 		
 			<div style="padding-left: 30px; padding-right: 30px;">
 	
-				<h1>ETSU CityExplorer</h1>
+				<h1 style="padding-bottom:15px;">ETSU CityExplorer</h1>
 
 				<form class="form-horizontal">
 				  <fieldset>
-					<legend>Register</legend>
-				
+				  
 					<div class="control-group">
-						<input type="text" id="firstname" placeholder="First Name">
+						<input type="text" class="input-block-level" id="firstname" placeholder="First Name">
 					</div>
 				
 					<div class="control-group">
-						<input type="text" id="lastname" placeholder="Last Name">
+						<input type="text" class="input-block-level" id="lastname" placeholder="Last Name">
 					</div>
 				
 					<div class="control-group">
-						<input type="text" id="username" placeholder="Username">
+						<input type="text" class="input-block-level" id="username" placeholder="Username">
 					</div>
 				
 					<div class="control-group">
-						<input type="password" id="password" placeholder="Password">
+						<input type="password" class="input-block-level" id="password" placeholder="Password">
 					</div>
 				
 					<div class="control-group">
-						<input type="password" id="confirmpassword" placeholder="Confirm Password">
+						<input type="password" class="input-block-level" id="confirmpassword" placeholder="Confirm Password">
 					</div>
 				
 					<div class="control-group">
-						<button type="submit" class="btn">Register</button>
+						<button type="submit" class="btn btn-primary btn-block">Register</button>
 					</div>
 				  </fieldset>
 				</form>
