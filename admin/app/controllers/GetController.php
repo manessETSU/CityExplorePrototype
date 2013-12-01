@@ -1,25 +1,20 @@
 <?php
 
-class MediaController extends BaseController {
+class GetController extends BaseController {
 
-	/**
-	 * Medium Repository
-	 *
-	 * @var Medium
-	 */
-	protected $medium;
+	protected $poi;
 
-	public function __construct(Medium $medium)
+	public function __construct(Poi $poi)
 	{
-		$this->medium = $medium;
+		$this->poi = $poi;
 	}
 
 
 	public function index()
 	{
 		$pois = $this->poi->all();
-
-		return Response::json(array('name' => 'Steve', 'state' => 'CA'));
+		
+		return Response::json($pois);
 	}
 	
 }
