@@ -12,8 +12,41 @@
     </script>
     <script type="text/javascript">
     
+      var markers = new Array();
+      var infoWindows = new Array();
+      var i = 0;
+      
+      	function createMarkerInfoWindow(i, m){
+        	var latLng = new google.maps.LatLng(m.lat, m.lon)
+        
+            marker = new google.maps.Marker({
+				position: latLng,
+				map: map,
+				infoWindowIndex : i
+			});
+			
+			var content = m.description;
+			
+			var infoWindow = new google.maps.InfoWindow({
+				content : content
+			});
+			
+			google.maps.event.addListener(marker, 'click', 
+            function(event)
+				{
+					map.panTo(event.latLng);
+					infoWindows[this.infoWindowIndex].open(map, this);
+				}
+        	);
+			
+			infoWindows.push(infoWindow);
+			markers.push(marker);
+        
+        }
+    
       //Just the basic set up for a google map that doesn't have any of the controls visible. 
       function initialize() {
+      
         var mapOptions = {
           center: new google.maps.LatLng(-33.861133,151.214038),
           zoom: 16,
@@ -26,22 +59,28 @@
         };
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-            
-        var operaHouseLatLng = new google.maps.LatLng(-33.857776,151.214999);
-        //-33.860081,151.215089
-        var governmentHouseLatLng = new google.maps.LatLng(-33.860081,151.215089);
-            
-         var marker = new google.maps.Marker({
-			  position: operaHouseLatLng,
-			  map: map,
-			  title: 'Sydney Opera House'
+        
+        $.getJSON( "http://localhost:8888/cityexploreprototype/admin/public/get", function( data ) {
+		  var items = [];
+		  $.each( data, function( key, val ) {
+			 /*console.log(val);
+			
+			 var latLon = new google.maps.LatLng(val.lat,val.lon);
+			
+			 var marker = new google.maps.Marker({
+			   position: latLon,
+			   map: map,
+			   title: 'Sydney Opera House'
+		  	 });
+		  	 
+		  	 points.push(marker);*/
+		  	 
+		  	 createMarkerInfoWindow(i, val);
+		  	 
+		  	 i++;
+			
 		  });
-		  
-		  var marker2 = new google.maps.Marker({
-			  position: governmentHouseLatLng,
-			  map: map,
-			  title: 'Sydney Opera House'
-		  });
+		});
 		  
 		  var marker2 = new google.maps.Marker({
 			  position: new google.maps.LatLng(-33.861133,151.214038),
