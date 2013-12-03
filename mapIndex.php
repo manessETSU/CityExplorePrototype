@@ -28,7 +28,9 @@
 			var content = m.description;
 			
 			var infoWindow = new google.maps.InfoWindow({
-				content : content
+				content : content + '<br /> ' +
+						  '<a href="https://maps.google.com/maps?q=from+-33.861133,151.214038+to+'+ m.lat +','+ m.lon +'">' +
+						  'Get Directions</a>'
 			});
 			
 			google.maps.event.addListener(marker, 'click', 
@@ -158,9 +160,10 @@
     <div id="sidr">
 	  <!-- Menu items -->
 	  <ul>
+	  	<li><a href="./mapIndex.php"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Map</a></li>
 		<li><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="#"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
-		<li><a href="#"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
+		<li><a href="./settings.php"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
 	  </ul>
 	  
 	  <hr />

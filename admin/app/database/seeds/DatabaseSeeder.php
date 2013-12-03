@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder {
 		$this->call('AdminsTableSeeder');
 		$this->call('PoisTableSeeder');
 		$this->call('MediaTableSeeder');
+		$this->call('BadgesTableSeeder');
 	}
 
 }

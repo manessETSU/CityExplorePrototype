@@ -33,3 +33,7 @@ Route::resource('admins', 'AdminsController');
 Route::resource('pois', 'PoisController');
 
 Route::resource('media', 'MediaController');
+
+Route::resource('media', 'MediaController');
+
+Route::resource('badges', 'BadgesController');
