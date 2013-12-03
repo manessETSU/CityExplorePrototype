@@ -56,8 +56,8 @@
 		<img src="img/governmentHouse.jpg" alt=""></img>
 		<div style="padding: 15px;">
 			<div style="margin-top:10px;" class="clearfix">
-				<div style="float:left;"><img src="img/googleNavigation.png" alt="" style="height:40px; vertical-align:middle;" />
-				Navigate Here</div>
+				<div style="float:left;"><a href="https://maps.google.com/maps?q=from+-33.861133,151.214038+to+-33.86007,151.215064"><img src="img/googleNavigation.png" alt="" style="height:40px; vertical-align:middle;" />
+				Navigate Here</a></div>
 				<span class="rating" style="float: right;">
 					<i class="icon-star icon-black"></i>
 					<i class="icon-star icon-black"></i>
@@ -75,7 +75,6 @@
 	  <!-- Menu items -->
 	  <ul>
 	  	<li><a href="./mapIndex.php"><i class="icon-map-marker icon-white"></i> &nbsp;&nbsp;Map</a></li>
-		<li><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="#"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
 		<li><a href="./settings.php"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
 	  </ul>
@@ -117,6 +116,13 @@
 	<script>
 		$(document).ready(function() {
 		  $('#simple-menu').sidr();
+		  
+		  $('#bookmarks').click(function() {
+            $('#bookmarks ul').slideToggle();
+            });
+          $('#pois').click(function() {
+            $('#pois ul').slideToggle();
+            });
 		});
 	</script>
  

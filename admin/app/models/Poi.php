@@ -7,7 +7,6 @@ class Poi extends Eloquent {
 		'name' => 'required',
 		'description' => 'required',
 		'lat' => 'required',
-		'lon' => 'required',
-		'media' => 'required'
+		'lon' => 'required'
 	);
 }

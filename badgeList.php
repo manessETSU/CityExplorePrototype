@@ -56,16 +56,16 @@
 		
 	  </div>
 	</div>
-    <div style="height:100%; width:100%;">
-    	<!-- Div for the map -->
-    	<div id="map-canvas"/>
+    <div style="padding-left:15px;">
+    	<table class="table">
+    		<tr><td><h3 style="display: inline-block;">Explore Sydney Badge</h3><img width="85" height="85" src="./img/badge-icon-small.jpg"/></td></tr>
+    	</table>
     </div>
     
     <div id="sidr">
 	  <!-- Menu items -->
 	  <ul>
 	  	<li><a href="./mapIndex.php"><i class="icon-map-marker icon-white"></i> &nbsp;&nbsp;Map</a></li>
-		<li><a href="./bookmarkList.php"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="./badgeList.php"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
 		<li><a href="./settings.php"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
 	  </ul>
@@ -73,6 +73,8 @@
 	  <hr />
 	  
 	  <ul id="locationList">
+	  	<li><a href="poiDetail.php">Sydney Opera House <span class="rating"><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i></span><h5 class="distance">0.14 km</h5></a></li>
+	  	<li><a href="poiDetail.php">Government House <span class="rating"><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i><i class="icon-star icon-white"></i></span><h5 class="distance">0.14 km</h5></a></li>
 	  </ul>
 	</div>
 	

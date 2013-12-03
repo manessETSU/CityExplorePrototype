@@ -24,10 +24,15 @@
             {{ Form::label('lon', 'Lon:') }}
             {{ Form::text('lon') }}
         </li>
-
-        <li>
-            {{ Form::label('media', 'Media:') }}
-            {{ Form::checkbox('media') }}
+        
+         <li>
+        	Media:<br />
+        	<ul>
+        		<li>Choose file: <input type="file"></li>
+        		<li>Choose file: <input type="file"></li>
+        		<li>Choose file: <input type="file"></li>
+        		<li>Choose file: <input type="file"></li>
+        	</ul>
         </li>
 
 		<li>

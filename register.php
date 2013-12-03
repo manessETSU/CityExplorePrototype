@@ -35,7 +35,7 @@
 					</div>
 				
 					<div class="control-group">
-						<button type="submit" class="btn btn-primary btn-block">Register</button>
+						<a href="./" class="btn btn-primary btn-block">Register</a>
 					</div>
 				  </fieldset>
 				</form>

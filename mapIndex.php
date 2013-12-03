@@ -28,12 +28,15 @@
 				infoWindowIndex : i
 			});
 			
-			var content = m.description;
+			var content = m.name;
 			
 			var infoWindow = new google.maps.InfoWindow({
 				content : content + '<br /> ' +
-						  '<a href="https://maps.google.com/maps?q=from+'+usrLat+','+usrLon+'+to+'+ m.lat +','+ m.lon +'">' +
-						  'Get Directions</a>'
+						  'Rating: <i class="icon-star icon"></i><i class="icon-star icon"></i><i class="icon-star icon"></i><i class="icon-star icon"></i><i class="icon-star icon"></i>' +
+						  '<br/><a href="https://maps.google.com/maps?q=from+'+usrLat+','+usrLon+'+to+'+ m.lat +','+ m.lon +'">' +
+						  'Get Directions</a>' +
+						  '<br /> <a href="#">Bookmark</a>' + 
+						  '<br /> <a href="poiDetail.php">Additional Details</a>'
 			});
 			
 			google.maps.event.addListener(marker, 'click', 
@@ -78,7 +81,7 @@
         map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         
-        $.getJSON( "http://localhost:8888/cityexploreprototype/admin/public/get", function( data ) {
+        $.getJSON( "./admin/public/get", function( data ) {
 		  var items = [];
 		  $.each( data, function( key, val ) {
 			 /*console.log(val);
@@ -167,18 +170,36 @@
 	  <!-- Menu items -->
 	  <ul>
 	  	<li><a href="./mapIndex.php"><i class="icon-map-marker icon-white"></i> &nbsp;&nbsp;Map</a></li>
-		<li><a href="./bookmarkList.php"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="./badgeList.php"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
 		<li><a href="./settings.php"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
 	  </ul>
 	  
 	  <hr />
+      
+      <ul>
+        <li id="bookmarks"><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a>
+            <ul style="display:none;">
+                <li><a href="poiDetail.php">Government House
+                    <span class="rating">
+                        <i class="icon-star icon-white"></i>
+                        <i class="icon-star icon-white"></i>
+                        <i class="icon-star icon-white"></i>
+                        <i class="icon-star icon-white"></i>
+                        <i class="icon-star icon-white"></i>
+                    </span>
+                    <h5 class="distance">0.14 km</h5></a>
+                </li>
+            </ul>
+        </li>
+        <li id="pois"><a href="#"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;POIs Nearby</a>
+          <ul id="locationList">
+          </ul>
+        </li>
+      </ul>
 	  
-	  <ul id="locationList">
-	  </ul>
 	</div>
 	
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div id="myModal" class="modal span6 hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
 		<h3 id="myModalLabel">You've earned a badge</h3>
@@ -198,6 +219,13 @@
 	<script>
 		$(document).ready(function() {
 		  $('#simple-menu').sidr();
+		  
+		  $('#bookmarks').click(function() {
+            $('#bookmarks ul').slideToggle();
+            });
+          $('#pois').click(function() {
+            $('#pois ul').slideToggle();
+            });
 		});
 		
 		$(document).ready(function () {
