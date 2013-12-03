@@ -41,6 +41,19 @@
 			
 			infoWindows.push(infoWindow);
 			markers.push(marker);
+			
+			$( "#locationList" ).append('<li><a href="#">' + m.name + ' ' + 
+	  									'<span class="rating">' +
+	  									'<i class="icon-star icon-white"></i>' + 
+										'<i class="icon-star icon-white"></i>' +
+										'<i class="icon-star icon-white"></i>' +
+										'<i class="icon-star icon-white"></i>' +
+										'<i class="icon-star icon-white"></i>' +
+	  									'</span>' + 
+	  									'<h5 class="distance">' +
+							  			'0.14 km' +
+	  									'</h5>' +
+	  									'</a></li>');
         
         }
     
@@ -146,37 +159,13 @@
 	  <!-- Menu items -->
 	  <ul>
 		<li><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
+		<li><a href="#"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
 		<li><a href="#"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
 	  </ul>
 	  
 	  <hr />
 	  
-	  <ul>
-	  	<li><a href="#">Government House 
-	  		<span class="rating">
-	  			<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-	  		</span>
-	  		<h5 class="distance">
-	  			0.14 km
-	  		</h5>
-	  	</a></li>
-		
-		<li><a href="#">Sydney Opera House
-		
-			<span class="rating">
-	  			<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-				<i class="icon-star icon-white"></i>
-	  		</span>
-	  		<h5 class="distance">
-	  			0.14 km
-	  		</h5>
-		
-		</a></li>
+	  <ul id="locationList">
 	  </ul>
 	</div>
 	
