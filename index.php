@@ -22,7 +22,7 @@
 					</div>
 				
 					<div class="control-group">
-						<button type="submit" class="btn btn-primary btn-block">Login</button>
+						<a href="mapIndex.php" class="btn btn-primary btn-block">Login</a>
 						<a href="register.php" class="btn btn-block">Don't have an account? Register Now.</a>
 					</div>
 				  </fieldset>

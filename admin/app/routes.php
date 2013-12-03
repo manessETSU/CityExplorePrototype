@@ -16,6 +16,11 @@ Route::get('/', function()
 	return View::make('adminLogin');
 });
 
+Route::get('/admin', function()
+{
+	return View::make('adminView');
+});
+
 //Route::get('/poiList', function()
 //{
 //	return View::make('getPois');

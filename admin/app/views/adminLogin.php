@@ -22,8 +22,7 @@
 					</div>
 				
 					<div class="control-group">
-						<button type="submit" class="btn btn-primary btn-block">Login</button>
-						<a href="register.php" class="btn btn-block">Don't have an account? Register Now.</a>
+						<a href="./admin" class="btn btn-primary btn-block">Login</a>
 					</div>
 				  </fieldset>
 				</form>
