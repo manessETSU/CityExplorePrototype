@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Edit Poi</h1>
+<h1>Edit POI</h1>
 {{ Form::model($poi, array('method' => 'PATCH', 'route' => array('pois.update', $poi->id))) }}
 	<ul>
         <li>

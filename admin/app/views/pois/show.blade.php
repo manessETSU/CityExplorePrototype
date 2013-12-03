@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Show Poi</h1>
+<h1>Show POI</h1>
 
 <p>{{ link_to_route('pois.index', 'Return to all pois') }}</p>
 

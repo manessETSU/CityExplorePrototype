@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>All Pois</h1>
+<h1>All Points of Interest (POI)</h1>
 
 <p>{{ link_to_route('pois.create', 'Add new poi') }}</p>
 

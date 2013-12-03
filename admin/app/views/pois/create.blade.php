@@ -2,7 +2,7 @@
 
 @section('main')
 
-<h1>Create Poi</h1>
+<h1>Create POI</h1>
 
 {{ Form::open(array('route' => 'pois.store')) }}
 	<ul>

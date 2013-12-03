@@ -60,7 +60,7 @@
     <div id="sidr">
 	  <!-- Menu items -->
 	  <ul>
-	  	<li><a href="./mapIndex.php"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Map</a></li>
+	  	<li><a href="./mapIndex.php"><i class="icon-map-marker icon-white"></i> &nbsp;&nbsp;Map</a></li>
 		<li><a href="#"><i class="icon-bookmark icon-white"></i> &nbsp;&nbsp;Bookmarks</a></li>
 		<li><a href="#"><i class="icon-th-large icon-white"></i> &nbsp;&nbsp;Badges</a></li>
 		<li><a href="./settings.php"><i class="icon-wrench icon-white"></i> &nbsp;&nbsp;Settings</a></li>
