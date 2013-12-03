@@ -45,13 +45,19 @@
 	<div class="wrapper" style="margin:15px">
 	
 		<div class="row-fluid">
-			<h1>Welcome!</h1>
+			<h3>Admin Functions</h3>
 		</div>
 		<div class="row-fluid">
 			<a href="./pois" class="btn btn-primary">Manage POIs</a>
 		</div>
 		<div class="row-fluid">
 			<br /><a href="./badges" class="btn btn-primary">Manage Badges</a>
+		</div>
+		
+		<hr />
+		
+		<div class="row-fluid">
+			<h3>Admin Level 2 Functions</h3><a href="./admins" class="btn btn-primary">Manage Admins</a>
 		</div>
 	
 	</div>

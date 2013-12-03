@@ -19,7 +19,7 @@
 			@foreach ($admins as $admin)
 				<tr>
 					<td>{{{ $admin->username }}}</td>
-					<td>{{{ $admin->password }}}</td>
+					<td>***************</td>
                     <td>{{ link_to_route('admins.edit', 'Edit', array($admin->id), array('class' => 'btn btn-info')) }}</td>
                     <td>
                         {{ Form::open(array('method' => 'DELETE', 'route' => array('admins.destroy', $admin->id))) }}

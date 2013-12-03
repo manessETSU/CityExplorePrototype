@@ -54,7 +54,8 @@
 	  </div>
 	</div>
     <div class="row-fluid" style="margin-top:10px; margin-left:10px;">
-    	<div class="row-fluid"><a class="btn btn-danger">Unregister</a></div>
+    	<div class="row-fluid"><a class="btn btn-danger">Logout</a></div>
+    	<div class="row-fluid"><br/><a class="btn btn-danger">Unregister</a></div>
     </div>
     
     <div id="sidr">

@@ -208,11 +208,11 @@
 		});
 		
 		$(document).ready(function () {
-		
-			usrLat = -33.860088;
-			usrLon = 151.21497;
-		
 			if(window.location.href.indexOf("governmenthouse") > -1) {
+			
+				usrLat = -33.860088;
+				usrLon = 151.21497;
+			
 			   setTimeout(function(){$('#myModal').modal('toggle')}, 2000);
 			}
 		});
