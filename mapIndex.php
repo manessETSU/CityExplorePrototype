@@ -12,6 +12,9 @@
     </script>
     <script type="text/javascript">
     
+    	var usrLat = -33.861133;
+    	var usrLon = 151.214038;
+    
       var markers = new Array();
       var infoWindows = new Array();
       var i = 0;
@@ -29,7 +32,7 @@
 			
 			var infoWindow = new google.maps.InfoWindow({
 				content : content + '<br /> ' +
-						  '<a href="https://maps.google.com/maps?q=from+-33.861133,151.214038+to+'+ m.lat +','+ m.lon +'">' +
+						  '<a href="https://maps.google.com/maps?q=from+'+usrLat+','+usrLon+'+to+'+ m.lat +','+ m.lon +'">' +
 						  'Get Directions</a>'
 			});
 			
@@ -98,7 +101,7 @@
 		});
 		  
 		  var marker2 = new google.maps.Marker({
-			  position: new google.maps.LatLng(-33.861133,151.214038),
+			  position: new google.maps.LatLng(usrLat,usrLon),
 			  map: map,
 			  title: 'Sydney Opera House',
 			  icon: './img/blue-dot.png'
@@ -117,10 +120,12 @@
     	
     	.navbar-inner{
        		-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;
+       		z-index:2000000000;
     	}
     	
     	.navbar{
     		margin-bottom:0px;
+    		z-index:2000000000;
     	}
     	
     	.navbar .brand {
@@ -132,6 +137,7 @@
 		  display: block;
 		  margin-top: -35px;
 		  color:white;
+		  z-index:2000000000;
 		}
 		
 		.distance{
@@ -172,12 +178,43 @@
 	  </ul>
 	</div>
 	
+	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+		<h3 id="myModalLabel">You've earned a badge</h3>
+	  </div>
+	  <div class="modal-body">
+		<p>You've earned a badge for exploring Sydney</p>
+	  </div>
+	  <div class="modal-footer">
+		<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+	  </div>
+	</div>
+	
 	<script src="http://code.jquery.com/jquery.js"></script>
 	<script src="js/jquery.sidr.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 	
 	<script>
 		$(document).ready(function() {
 		  $('#simple-menu').sidr();
+		});
+		
+		$(document).ready(function () {
+			if(window.location.href.indexOf("opera") > -1) {
+			   usrLat = -33.857859;
+			   usrLon = 151.214943;
+			}
+		});
+		
+		$(document).ready(function () {
+		
+			usrLat = -33.860088;
+			usrLon = 151.21497;
+		
+			if(window.location.href.indexOf("governmenthouse") > -1) {
+			   setTimeout(function(){$('#myModal').modal('toggle')}, 2000);
+			}
 		});
 	</script>
  
